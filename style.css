@@ -1,0 +1,345 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS & RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. HEADER & LOGOMARCA (Item E)
+   ========================================================================== */
+header {
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logomarca criada via CSS */
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.logo-icon {
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a2e;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #00f2fe;
+}
+
+/* ==========================================================================
+   3. MENU DE NAVEGAÇÃO (ABAS)
+   ========================================================================== */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #b8b8b8;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #fff;
+    background-color: #2e2e4f;
+}
+
+nav ul li a.active {
+    border-bottom: 3px solid #00f2fe;
+    border-radius: 4px 4px 0 0;
+}
+
+/* ==========================================================================
+   4. CONTROLE DE EXIBIÇÃO DAS ABAS
+   ========================================================================== */
+.tab-content {
+    display: none;
+    padding: 40px 0;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   5. ABA A: QUEM SOMOS
+   ========================================================================== */
+.about-section {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #00f2fe;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card-foco {
+    background: #f8fafc;
+    padding: 20px;
+    border-left: 4px solid #4facfe;
+    border-radius: 0 8px 8px 0;
+}
+
+/* ==========================================================================
+   6. ABA B: PRODUTOS (3 Linhas, 4 Produtos cada)
+   ========================================================================== */
+.linha-produtos {
+    margin-bottom: 50px;
+}
+
+.linha-titulo {
+    background-color: #e2e8f0;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    color: #1a1a2e;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid #edf2f7;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-img {
+    background-color: #eaedf2;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a0aec0;
+    font-size: 48px;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2d3748;
+}
+
+.product-desc {
+    font-size: 14px;
+    color: #718096;
+    margin-bottom: 15px;
+    height: 42px;
+    overflow: hidden;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+/* ==========================================================================
+   7. ABA C: CONTATO / COMUNICAÇÃO
+   ========================================================================== */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contact-info i {
+    color: #4facfe;
+    margin-right: 10px;
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #4facfe;
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+}
+
+button {
+    background: linear-gradient(135deg, #1a1a2e, #2e2e4f);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   8. ABA D: FAQ
+   ========================================================================== */
+.faq-container {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.faq-item {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 15px;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.faq-question::before {
+    content: '🔹';
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.faq-answer {
+    color: #4a5568;
+    padding-left: 24px;
+}
+
+/* ==========================================================================
+   9. FOOTER (RODAPÉ)
+   ========================================================================== */
+footer {
+    background-color: #1a1a2e;
+    color: #a0aec0;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    font-size: 14px;
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBoutique | Soluções em Eletrônicos</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+
+    <!-- HEADER & LOGOMARCA & ABAS -->
+    <header>
+        <div class="container header-content">
+            <!-- Item e: Logomarca -->
+            <div class="logo">
+                <div class="logo-icon">TB</div>
+                Tech<span>Boutique</span>
+            </div>
+            
+            <!-- Menu de Navegação por Abas -->
+            <nav>
+                <ul>
+                    <li><a class="nav-link active" onclick="openTab(event, 'empresa')">A Empresa</a></li>
+                    <li><a class="nav-link" onclick="openTab(event, 'produtos')">Produtos</a></li>
+                    <li><a class="nav-link" onclick="openTab(event, 'contato')">Contato</a></li>
+                    <li><a class="nav-link" onclick="openTab(event, 'faq')">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- ========================================== -->
+        <!-- ABA A: APRESENTAR A EMPRESA                -->
+        <!-- ========================================== -->
+        <section id="empresa" class="tab-content active">
+            <div class="about-section">
+                <h2>Quem Somos</h2>
+                <p>A <strong>TechBoutique</strong> nasceu da paixão pela alta tecnologia e da necessidade do mercado por componentes selecionados e assistência técnica especializada de nível laboratorial. Atuamos tanto no fornecimento de hardware premium quanto na manutenção avançada de smartphones, computadores de alta performance (Desktops/Games) e consoles de última geração.</p>
+                
+                <div class="about-grid">
+                    <div class="card-foco">
+                        <h3>Nossa Missão</h3>
+                        <p>Oferecer soluções em tecnologia com a máxima precisão técnica, garantindo a longevidade dos equipamentos de nossos clientes através de peças originais e mão de obra altamente qualificada.</p>
+                    </div>
+                    <div class="card-foco">
+                        <h3>Diferencial Técnico</h3>
+                        <p>Contamos com laboratório próprio equipado com tecnologia de ponta para diagnósticos complexos, reparos em placas-mãe (microsoldagem) e substituição de componentes sensíveis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- ABA B: APRESENTAR OS PRODUTOS              -->
+        <!-- ========================================== -->
+        <section id="produtos" class="tab-content">
+            
+            <!-- LINHA 1: Componentes de Hardware -->
+            <div class="linha-produtos">
+                <div class="linha-titulo">
+                    <h3>Linha 1: Hardware & Upgrade</h3>
+                </div>
+                <div class="products-grid">
+                    <!-- Produto 1 -->
+                    <div class="product-card">
+                        <div class="product-img">⚡</div>
+                        <div class="product-info">
+                            <div class="product-title">Memória RAM 16GB DDR5</div>
+                            <div class="product-desc">Módulo de alta velocidade 5200MHz ideal para upgrades gamers e workstations.</div>
+                            <div class="product-price">R$ 450,00</div>
+                        </div>
+                    </div>
+                    <!-- Produto 2 -->
+                    <div class="product-card">
+                        <div class="product-img">💾</div>
+                        <div class="product-info">
+                            <div class="product-title">SSD NVMe M.2 1TB</div>
+                            <div class="product-desc">Taxa de leitura de até 7000MB/s. Sistema operacional carregado em segundos.</div>
+                            <div class="product-price">R$ 520,00</div>
+                        </div>
+                    </div>
+                    <!-- Produto 3 -->
+                    <div class="product-card">
+                        <div class="product-img">🔌</div>
+                        <div class="product-info">
+                            <div class="product-title">Fonte Modular 750W 80 Plus</div>
+                            <div class="product-desc">Energia estável e eficiente com certificação Gold para sistemas robustos.</div>
+                            <div class="product-price">R$ 680,00</div>
+                        </div>
+                    </div>
+                    <!-- Produto 4 -->
+                    <div class="product-card">
+                        <div class="product-img">🥶</div>
+                        <div class="product-info">
+                            <div class="product-title">Water Cooler 240mm</div>
+                            <div class="product-desc">Refrigeração líquida selada de alta performance para processadores exigentes.</div>
+                            <div class="product-price">R$ 390,00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LINHA 2: Smartphones & Acessórios Premium -->
+            <div class="linha-produtos">
+                <div class="linha-titulo">
+                    <h3>Linha 2: Smartphones & Acessórios</h3>
+                </div>
+                <div class="products-grid">
+                    <!-- Produto 1 -->
+                    <div class="product-card">
+                        <div class="product-img">📱</div>
+                        <div class="product-info">
+                            <div class="product-title">Carregador Nitreto de Gálio (GaN) 65W</div>
+                            <div class="product-desc">Carregamento ultra rápido multidispositivos (Notebooks e Celulares).</div>
+                            <div class="product-price">R$ 180,00</div>
+                        </div>
+                    </div>
+                    <!-- Produto 2 -->
+                    <div class="product-card">
+                        <div class="product-img">🎧</div>
+                        <div class="product-info">
+                            <div class="product-title">Fone de Ouvido Bluetooth ANC</div>
+                            <div class="product-desc">Cancelamento ativo de ruído inteligente e bateria de até 30 horas.</div>
+                            <div class="product-price">R$ 350,00</div>
+                        </div>
+                    </div>
+                    <!-- Produto 3 -->
+                    <div class="product-card">
+                        <div class="product-img">🛡️</div>
+                        <div class="product-info">
+                            <div class="product-title">Película de Vidro Safira Premium</div>
+                            <div class="product-desc">Máxima proteção contra impactos e riscos para telas de smartphones.</div>
+                            <div class="product-price">R$ 75,00</div>
+                        </div>
+                    </div>
+                    <!-- Produto 4 -->
+                    <div class="product-card">
+                        <div class="product-img">🔋</div>
+                        <div class="product-info">
+                            <div class="product-title">Power Bank 20.000mAh Indução</div>
+                            <div class="product-desc">Bateria externa com suporte a carregamento sem fio e saídas extras.</div>
+                            <div class="product-price">R$ 240,00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LINHA 3: Peças & Periféricos para Consoles -->
+            <div class="linha-produtos">
+                <div class="linha-titulo">
+                    <h3>Linha 3: Universo Console & Gaming</h3>
+                </div>
+                <div class="products-grid">
+                    <!-- Produto 1 -->
+                    <div class="product-card">
+                        <div class="product-img">🎮</div>
+                        <div class="product-info">
+                            <div class="product-title">Controle Custom Pro Sem Fio</div>
+                            <div class="product-desc">Gatilhos ajustáveis e analógicos com tecnologia Hall Effect contra drift.</div>
+                            <div class="product-price">R$ 499,00</div>
+                        </div>
+                    </div>
+                    <!-- Produto 2 -->
+                    <div class="product-card">
+                        <div class="product-img">💨</div>
+                        <div class="product-info">
+                            <div class="product-title">Base de Resfriamento com LED</div>
+                            <div class="product-desc">Suporte vertical com coolers integrados e hubs USB para consoles modernos.</div>
+                            <div class="product-price">R$ 160,00</div>
+                        </div>
+                    </div>
+                    <!-- Produto 3 -->
+                    <div class="product-card">
+                        <div class="product-img">🎛️</div>
+                        <div class="product-info">
+                            <div class="product-title">Grip de Silicone + Extensores</div>
+                            <div class="product-desc">Melhor ergonomia e precisão milimétrica para seus analógicos.</div>
+                            <div class="product-price">R$ 45,00</div>
+                        </div>
+                    </div>
+                    <!-- Produto 4 -->
+                    <div class="product-card">
+                        <div class="product-img">🎤</div>
+                        <div class="product-info">
+                            <div class="product-title">Headset Gamer 7.1 Espacial</div>
+                            <div class="product-desc">Áudio imersivo de alta definição e microfone profissional com cancelamento.</div>
+                            <div class="product-price">R$ 320,00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ========================================== -->
+        <!-- ABA C: LINHA DE COMUNICAÇÃO (CONTATO)      -->
+        <!-- ========================================== -->
+        <section id="contato" class="tab-content">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Fale Conosco</h2>
+                    <p style="margin-bottom: 30px;">Deseja agendar uma manutenção ou tirar dúvidas sobre compatibilidade de peças? Use nossos canais oficiais:</p>
+                    
+                    <div class="info-item">
+                        <strong>📍 Endereço Atendimento Local:</strong>
+                        <p>Av. Paulista, 1000 - Sala 42 - Bela Vista, São Paulo - SP</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>📞 Telefone / WhatsApp:</strong>
+                        <p>(11) 99999-8888</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>✉️ E-mail corporativo:</strong>
+                        <p>contato@techboutique.com.br</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Envie uma mensagem direta</h3>
+                    <form onsubmit="alert('Mensagem enviada com sucesso! Entraremos em contato em breve.'); return false;">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" required placeholder="Seu nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" required placeholder="seu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="msg">Como podemos ajudar?</label>
+                            <textarea id="msg" rows="4" required placeholder="Descreva seu problema ou o produto de interesse..."></textarea>
+                        </div>
+                        <button type="submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- ABA D: POSSUIR UM FAQ                      -->
+        <!-- ========================================== -->
+        <section id="faq" class="tab-content">
+            <div class="faq-container">
+                <h2>Perguntas Frequentes (FAQ)</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Qual é o prazo médio para o orçamento de uma manutenção?</div>
+                    <div class="faq-answer">O nosso laboratório realiza a análise completa e emite o orçamento detalhado em até 24 horas úteis após o recebimento do equipamento (PC, Smartphone ou Console).</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">As peças de reposição utilizadas possuem garantia?</div>
+                    <div class="faq-answer">Sim. Todas as peças utilizadas em nossos upgrades e manutenções são originais ou de marcas premium homologadas, contando com garantia legal e contratual de 90 dias diretamente conosco.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Vocês realizam reparos complexos em placas-mãe (BGA / Microsoldagem)?</div>
+                    <div class="faq-answer">Com certeza. Somos especializados em eletrônica avançada. Realizamos recondicionamento de trilhas, troca de conectores de carga, reparo de curto-circuito em placas e rebalding/BGA de consoles e placas de vídeo.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Como funciona a compatibilidade na compra de hardware de upgrade?</div>
+                    <div class="faq-answer">Caso tenha dúvidas se uma memória ou SSD é compatível com seu equipamento atual, basta nos informar o modelo do seu processador/placa-mãe na aba de Contato que nossa equipe valida para você antes da compra.</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TechBoutique Ltda. Todos os direitos reservados. Desenvolvimento Próprio Clean-Code.</p>
+        </div>
+    </footer>
+
+    <!-- LOGICA EM JAVASCRIPT PARA ALTERNANCIA DAS ABAS -->
+    <script>
+        function openTab(evt, tabName) {
+            // Esconde todos os elementos com a classe "tab-content"
+            var tabContent = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+
+            // Remove a classe "active" de todos os links de navegação
+            var navLinks = document.getElementsByClassName("nav-link");
+            for (var i = 0; i < navLinks.length; i++) {
+                navLinks[i].classList.remove("active");
+            }
+
+            // Mostra a aba atual e adiciona a classe "active" ao botão que a abriu
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
